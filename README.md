@@ -13,7 +13,6 @@ Asegúrese de tener instalado **Node.js** en su computadora.
 
 2. Instalación de Dependencias
 Abra una terminal en la carpeta del proyecto y ejecute el siguiente comando para instalar las librerías necesarias:
-```bash
 npm install
 
 3. Correr la Aplicación

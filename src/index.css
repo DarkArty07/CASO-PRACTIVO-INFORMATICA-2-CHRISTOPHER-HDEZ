@@ -1,0 +1,161 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #fb8c00; /* Dragon Ball Orange */
+}
+
+/* Character Grid */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.character-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(251, 140, 0, 0.3);
+  border-color: #fb8c00;
+}
+
+.character-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* Contain to show full character */
+  background: #000;
+  border-radius: 4px;
+}
+
+.character-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Detail View */
+.character-detail {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #fb8c00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-detail img {
+  height: 400px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  drop-shadow: 0 0 10px rgba(251, 140, 0, 0.5);
+}
+
+.detail-info {
+  text-align: left;
+  width: 100%;
+}
+
+.detail-info h2 {
+  color: #fb8c00;
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}
+
+.detail-info .ki {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  background-color: #fb8c00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e65100;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #444;
+  border-color: #fb8c00;
+}
+
+.pagination span {
+  font-weight: bold;
+}
